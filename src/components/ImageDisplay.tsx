@@ -29,9 +29,10 @@ const ImageDisplay: React.FC<ImageDisplayProps> = ({
 
   const sendTip = async () => {
     try {
-      const quantity = "0.00001";
-      const recipient = "79PC6eRRgSTxuaIQH_Fj6MqwBIvgkmw788p_j95hf98";
-      await transferAR(api, quantity, recipient);
+      // console.log("trying to set tip")
+      // const quantity = "0.00001";
+      // const recipient = "dl-P18ET2e1RDTBE5Oqu7iwK0ZHgJ1Wt5ANru610tak";
+      await transferAR(api);
     } catch (error: any) {
       console.error("Error sending tip:", error);
       if (error.message === "Arweave Wallet not connected") {
